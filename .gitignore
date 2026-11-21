@@ -7,3 +7,5 @@ work/*/review/packet/
 *.MOV
 *.mp4
 *.wav
+*.jpg
+*.png
