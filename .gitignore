@@ -1,0 +1,9 @@
+# Raw footage, renders and intermediates stay out of git (privacy + size)
+work/*/source/
+work/*/assets/
+work/*/out/
+work/*/review/packet/
+*.mov
+*.MOV
+*.mp4
+*.wav
