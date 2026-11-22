@@ -4,7 +4,7 @@
 
 | Part | Voiceover | Footage |
 |------|-----------|---------|
-| Intro | Hi, welcome to [CHANNEL NAME]! I'm Vijaylakshmi, an LSR and [ISB?] alum, and I've been working with startups for a while now. My work has me doing a lot of different, exciting things in the startup ecosystem… and on Thursday, I spent half a day evaluating 11 student founders and their startup pitches. | You on camera (if filmed) → 0431 student pitching; on-screen: "11 student founders · half a day" |
+| Intro | Hi, welcome to WayWithVJ! I'm Vijaylakshmi, an LSR and ISB alum, and I've been working with startups for a while now. My work has me doing a lot of different, exciting things in the startup ecosystem… and on Thursday, I spent half a day evaluating 11 student founders and their startup pitches. | You on camera (if filmed) → 0431 student pitching; on-screen: "11 student founders · half a day" |
 | Format | Ten minutes to pitch, five minutes of me cross-questioning… and then I decide if they keep building. These are some things I think you should keep in mind when you're pitching. | 0425 you talking, gesturing |
 | Founder Story | First, the founder story. How did you discover this problem, and why does it matter so much to you? That's founder–market fit, and it's the first thing I look for. | 0427 you listening, chin on hand |
 | Competitive Landscape | Second, the competitive landscape. These startups were all over the place: consumer brands, AI startups, even extensions of family businesses. I can't know every industry in depth, so give me a quick overview of the market. Who are the incumbents, what do they offer, and where's your differentiation? | 0433 setting up laptop/demo |
