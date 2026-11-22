@@ -56,7 +56,7 @@ body.light .pl{background:rgba(31,46,38,.12);color:var(--deep);border-color:rgba
 body.light .pl.cur{background:var(--deep);color:#fff;border-color:var(--deep)}
 body.light .pl.done{background:var(--accent);color:#fff;border-color:var(--accent)}
 /* lesson card */
-#lcard{left:64px;right:130px;top:1040px;padding:40px 48px 46px}
+#lcard{left:64px;right:130px;top:1090px;padding:40px 48px 46px}
 #lcard .num{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:28px;letter-spacing:.06em;padding:8px 18px;border-radius:999px}
 #lcard .tagr{position:absolute;right:46px;top:52px;font-weight:700;font-size:23px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 #lcard h1{font-weight:800;font-size:84px;line-height:1.0;letter-spacing:-.03em;margin-top:22px}
@@ -101,11 +101,11 @@ body.light .pl.done{background:var(--accent);color:#fff;border-color:var(--accen
 #segok{left:64px;top:1225px}
 #segok .pill{background:var(--deep);color:#fff;font-size:30px}
 /* recap */
-#recap{left:64px;right:130px;top:700px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#recap{left:64px;right:130px;top:790px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .rc{height:200px;border-radius:26px;background:var(--card);padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 24px rgba(0,0,0,.14)}
 .rc .n{display:flex;justify-content:space-between;font-weight:800;font-size:28px;color:var(--accent)}
 .rc .t{font-weight:800;font-size:40px;line-height:1.05;color:var(--ink)}
-#recapHead{left:64px;top:600px;font-weight:800;font-size:52px;color:var(--ink);letter-spacing:-.02em}
+#recapHead{left:64px;top:690px;font-weight:800;font-size:52px;color:var(--ink);letter-spacing:-.02em}
 /* cta */
 #cta{left:64px;right:130px;top:1050px;padding:34px 40px 38px;text-align:center}
 #cta .ic{width:84px;height:84px;border-radius:50%;background:var(--accent);margin:0 auto;display:flex;align-items:center;justify-content:center}
@@ -224,10 +224,10 @@ function render(t){
  if(t>=15.05&&t<16.0){const r=Math.min(10,(t-15.1)/.9*10);$('tm1').textContent='⏱ '+String(Math.max(0,Math.floor(r))).padStart(2,'0')+':00 pitch'}else if(t>=16.0)$('tm1').textContent='⏱ 10:00 pitch';
  show('same',t,20.35,23.3,{dy:20,inD:.15});$('same-t').innerHTML=typed('same',t);
  // LOCK TILES
- show('tilesHead',t,23.45,25.65,{dy:20});
- ['t1','t2','t3','t4'].forEach((id,i)=>{show(id,t,23.50+i*0.16,25.65,{dy:30,scale:true})});
- const op=t>=25.55;$('t1').classList.toggle('open',op);$('t1').firstElementChild.textContent=op?'🔓':'🔒';
- if(op&&t<25.9){$('t1').style.transform=`scale(${1+0.12*Math.sin(cl((t-25.55)/.3)*Math.PI)})`}
+ show('tilesHead',t,23.45,25.42,{dy:20,outD:.18});
+ ['t1','t2','t3','t4'].forEach((id,i)=>{show(id,t,23.50+i*0.16,25.42,{dy:30,scale:true,outD:.18})});
+ const op=t>=25.28;$('t1').classList.toggle('open',op);$('t1').firstElementChild.textContent=op?'🔓':'🔒';
+ if(op&&t<25.42){$('t1').style.transform=`scale(${1+0.12*Math.sin(cl((t-25.28)/.3)*Math.PI)})`}
  // PROGRESS LOCKS + CARDS
  const inL=t>=25.75&&t<81.0; $('prog').style.opacity=inL?cl(Math.min((t-25.75)/.25,(81.0-t)/.2)):0;
  let cur=null;CARDS.forEach((c,i)=>{const el=$('prog').children[i];const st=t>=c.t1?'done':(t>=c.t0?'cur':'');
@@ -247,11 +247,11 @@ function render(t){
  [['k1','q1','s2q1','b1',47.95],['k2','q2','s2q2','b2',48.80],['k3','q3','s2q3','b3',49.60]].forEach(([k,q,id,b,ct])=>{
    show(k,t,TY[id].t0-0.05,50.2,{dy:14,inD:.15});$(q).innerHTML=(t<50.3)?typed(id,t,{caret:false}):'';const on=t>=ct;$(b).classList.toggle('on',on);$(b).textContent=on?'✓':''});
  // S3
- show('s3b',t,50.45,59.2,{dy:16});$('s3t').innerHTML=(t>=50.3&&t<59.3)?typed('s3title',t):'';
- show('jline',t,53.2,59.2,{dy:0,inD:.2});$('jfill').style.width=(100*eo((t-53.92)/1.4))+'%';
- [['n1',53.92],['n2',54.38],['n3',54.84],['n4',55.30]].forEach(([id,ct],i)=>{show(id,t,53.25+i*0.08,59.2,{dy:20,scale:true});$(id).classList.toggle('on',t>=ct)});
- $('plan').innerHTML=(t>=56.3&&t<59.3)?typed('s3plan',t):'';
- show('through',t,58.20,59.2,{dy:16,scale:true});
+ show('s3b',t,50.45,58.95,{dy:16});$('s3t').innerHTML=(t>=50.3&&t<59.2)?typed('s3title',t):'';
+ show('jline',t,53.2,58.95,{dy:0,inD:.2});$('jfill').style.width=(100*eo((t-53.92)/1.4))+'%';
+ [['n1',53.92],['n2',54.38],['n3',54.84],['n4',55.30]].forEach(([id,ct],i)=>{show(id,t,53.25+i*0.08,58.95,{dy:20,scale:true});$(id).classList.toggle('on',t>=ct)});
+ $('plan').innerHTML=(t>=56.3&&t<59.2)?typed('s3plan',t):'';
+ show('through',t,58.20,58.95,{dy:16,scale:true});
  // S4 notes
  const s4on=t>=63.75&&t<78.6;
  show('s4b',t,63.85,78.5,{dy:16});$('s4t').innerHTML=s4on?typed('s4title',t):'';
@@ -273,8 +273,8 @@ function render(t){
  if(c.show){cu.style.opacity=1;const press=c.click!==null&&c.click<0.12?0.85:1;cu.style.transform=`translate(${c.x-8}px,${c.y-4}px) scale(${press})`}else cu.style.opacity=0;
  if(c.show&&c.click!==null){const u=c.click/0.35;rp.style.opacity=1-u;rp.style.transform=`translate(${c.x}px,${c.y}px) scale(${0.4+0.9*u})`}else rp.style.opacity=0;
  // CAPTIONS
- const hide=t<6.4||t>81.1||(t>8.3&&t<12.75)||(t>23.4&&t<25.75)||(t>=78.6&&t<81.1);
- let y=full?932:1262; if(t>=6.4&&t<14.3)y=1352; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
+ const hide=t<6.4||t>81.1||(t>8.3&&t<12.75)||(t>23.4&&t<25.75)||(t>=80.75&&t<81.1);
+ let y=full?985:1262; if(t>=6.4&&t<14.3)y=1352; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
  const cap=$('cap');cap.style.top=y+'px';const ch=hide?null:CAPS.find(c=>t>=c.s&&t<c.e);
  if(!ch)cap.innerHTML='';else{cap.innerHTML=ch.words.map((w,i)=>{const nx=ch.words[i+1];const on=t>=w.s&&(!nx||t<nx.s);return`<span class="w${on?' on':''}">${w.w}</span>`}).join(' ');
   const a=cl((t-ch.s)/.08);cap.style.opacity=a;cap.style.transform=`translateY(${(1-a)*8}px)`}

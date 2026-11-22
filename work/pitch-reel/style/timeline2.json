@@ -1,36 +1,345 @@
 {
- "scenes":[[34.40,59.30],[63.75,81.00]],
- "type":[
-  {"id":"hook_big","text":"11 student\nfounders.","t0":0.40,"cps":15},
-  {"id":"hook_sub","text":"Who gets to keep building?","t0":4.00,"cps":20},
-  {"id":"name","text":"Vijaylakshmi","t0":8.41,"cps":16},
-  {"id":"eco","text":"Startup ecosystem","t0":12.85,"cps":18},
-  {"id":"same","text":"Same questions. Again & again.","t0":20.40,"cps":22},
-  {"id":"c1sub","text":"How did you discover this problem, and why does it matter to you?","t0":26.35,"cps":32},
-  {"id":"s2title","text":"Competitive\nLandscape","t0":34.70,"cps":16},
-  {"id":"s2quick","text":"Give me a quick market overview","t0":45.00,"cps":24},
-  {"id":"s2q1","text":"Who are the incumbents?","t0":47.10,"cps":26},
-  {"id":"s2q2","text":"What do they offer?","t0":48.05,"cps":26},
-  {"id":"s2q3","text":"Where's your edge?","t0":48.85,"cps":26},
-  {"id":"s3title","text":"User\nJourney","t0":50.60,"cps":14},
-  {"id":"s3plan","text":"What's your plan?","t0":56.30,"cps":18},
-  {"id":"c4sub","text":"The problem you want to solve, and who you're solving it for.","t0":60.00,"cps":32},
-  {"id":"s4title","text":"Vision\n+ ICP","t0":63.90,"cps":14},
-  {"id":"n1","text":"Initial pitch → no 5–10 yr plan needed","t0":64.55,"cps":28},
-  {"id":"n2","text":"Product vision = the problem you solve","t0":66.50,"cps":28},
-  {"id":"n3","text":"ICP = who you're solving it for","t0":69.10,"cps":28},
-  {"id":"n4","text":"Proof of work → things will change","t0":75.90,"cps":28}
+ "scenes": [
+  [
+   34.4,
+   59.3
+  ],
+  [
+   63.75,
+   81.0
+  ]
  ],
- "cursor":[
-  {"t":24.85,"x":1010,"y":1560,"show":1},{"t":25.45,"x":215,"y":1105},{"t":25.55,"x":215,"y":1105,"click":1},{"t":25.95,"x":215,"y":1105,"show":0},
-  {"t":38.90,"x":980,"y":1500,"show":1},{"t":39.36,"x":250,"y":800,"click":1},{"t":40.00,"x":520,"y":800,"click":1},{"t":41.62,"x":790,"y":800,"click":1},
-  {"t":47.95,"x":118,"y":975,"click":1},{"t":48.80,"x":118,"y":1055,"click":1},{"t":49.60,"x":118,"y":1135,"click":1},{"t":50.05,"x":118,"y":1135,"show":0},
-  {"t":53.40,"x":980,"y":1450,"show":1},{"t":53.92,"x":160,"y":915,"click":1},{"t":54.38,"x":375,"y":915,"click":1},{"t":54.84,"x":590,"y":915,"click":1},{"t":55.30,"x":805,"y":915,"click":1},{"t":55.80,"x":805,"y":915,"show":0},
-  {"t":73.10,"x":980,"y":1500,"show":1},{"t":73.58,"x":230,"y":1145,"click":1},{"t":73.95,"x":505,"y":1145,"click":1},{"t":74.32,"x":780,"y":1145,"click":1},{"t":74.80,"x":780,"y":1145,"show":0},
-  {"t":81.75,"x":990,"y":1500,"show":1},{"t":82.18,"x":507,"y":1126,"click":1},{"t":82.70,"x":507,"y":1126,"show":0}
+ "type": [
+  {
+   "id": "hook_big",
+   "text": "11 student\nfounders.",
+   "t0": 0.36,
+   "cps": 34
+  },
+  {
+   "id": "hook_sub",
+   "text": "Who gets to keep building?",
+   "t0": 4.0,
+   "cps": 20
+  },
+  {
+   "id": "name",
+   "text": "Vijaylakshmi",
+   "t0": 8.41,
+   "cps": 16
+  },
+  {
+   "id": "eco",
+   "text": "Startup ecosystem",
+   "t0": 12.85,
+   "cps": 18
+  },
+  {
+   "id": "same",
+   "text": "Same questions. Again & again.",
+   "t0": 20.4,
+   "cps": 22
+  },
+  {
+   "id": "c1sub",
+   "text": "How did you discover this problem, and why does it matter to you?",
+   "t0": 26.35,
+   "cps": 32
+  },
+  {
+   "id": "s2title",
+   "text": "Competitive\nLandscape",
+   "t0": 34.7,
+   "cps": 16
+  },
+  {
+   "id": "s2quick",
+   "text": "Give me a quick market overview",
+   "t0": 45.0,
+   "cps": 24
+  },
+  {
+   "id": "s2q1",
+   "text": "Who are the incumbents?",
+   "t0": 47.1,
+   "cps": 26
+  },
+  {
+   "id": "s2q2",
+   "text": "What do they offer?",
+   "t0": 48.05,
+   "cps": 26
+  },
+  {
+   "id": "s2q3",
+   "text": "Where's your edge?",
+   "t0": 48.85,
+   "cps": 26
+  },
+  {
+   "id": "s3title",
+   "text": "User\nJourney",
+   "t0": 50.6,
+   "cps": 14
+  },
+  {
+   "id": "s3plan",
+   "text": "What's your plan?",
+   "t0": 56.3,
+   "cps": 18
+  },
+  {
+   "id": "c4sub",
+   "text": "The problem you want to solve, and who you're solving it for.",
+   "t0": 60.0,
+   "cps": 32
+  },
+  {
+   "id": "s4title",
+   "text": "Vision\n+ ICP",
+   "t0": 63.9,
+   "cps": 14
+  },
+  {
+   "id": "n1",
+   "text": "Initial pitch \u2192 no 5\u201310 yr plan needed",
+   "t0": 64.55,
+   "cps": 28
+  },
+  {
+   "id": "n2",
+   "text": "Product vision = the problem you solve",
+   "t0": 66.5,
+   "cps": 28
+  },
+  {
+   "id": "n3",
+   "text": "ICP = who you're solving it for",
+   "t0": 69.1,
+   "cps": 28
+  },
+  {
+   "id": "n4",
+   "text": "Proof of work \u2192 things will change",
+   "t0": 75.9,
+   "cps": 28
+  }
  ],
- "pops":[7.45,9.19,9.73,15.10,16.05,23.50,23.66,23.82,23.98,31.24,58.20,73.55,84.20],
- "whoosh":[[6.45,"soft"],[25.80,"card"],[34.40,"scene"],[50.30,"scene"],[59.44,"card"],[63.75,"scene"],[78.60,"soft"],[81.15,"card"]],
- "ding":[25.60,49.65,58.25,79.05,82.25],
- "ticks":[15.10,16.00]
+ "cursor": [
+  {
+   "t": 24.6,
+   "x": 1010,
+   "y": 1560,
+   "show": 1
+  },
+  {
+   "t": 25.18,
+   "x": 204,
+   "y": 1090
+  },
+  {
+   "t": 25.28,
+   "x": 204,
+   "y": 1090,
+   "click": 1
+  },
+  {
+   "t": 25.6,
+   "x": 204,
+   "y": 1090,
+   "show": 0
+  },
+  {
+   "t": 38.9,
+   "x": 1000,
+   "y": 1450,
+   "show": 1
+  },
+  {
+   "t": 39.36,
+   "x": 325,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 40.0,
+   "x": 625,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 41.62,
+   "x": 925,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 47.95,
+   "x": 78,
+   "y": 975,
+   "click": 1
+  },
+  {
+   "t": 48.8,
+   "x": 78,
+   "y": 1055,
+   "click": 1
+  },
+  {
+   "t": 49.6,
+   "x": 78,
+   "y": 1135,
+   "click": 1
+  },
+  {
+   "t": 50.05,
+   "x": 78,
+   "y": 1135,
+   "show": 0
+  },
+  {
+   "t": 53.4,
+   "x": 980,
+   "y": 1450,
+   "show": 1
+  },
+  {
+   "t": 53.92,
+   "x": 160,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 54.38,
+   "x": 375,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 54.84,
+   "x": 590,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 55.3,
+   "x": 805,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 55.8,
+   "x": 805,
+   "y": 915,
+   "show": 0
+  },
+  {
+   "t": 73.1,
+   "x": 980,
+   "y": 1500,
+   "show": 1
+  },
+  {
+   "t": 73.58,
+   "x": 230,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 73.95,
+   "x": 505,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 74.32,
+   "x": 780,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 74.8,
+   "x": 780,
+   "y": 1145,
+   "show": 0
+  },
+  {
+   "t": 81.75,
+   "x": 990,
+   "y": 1500,
+   "show": 1
+  },
+  {
+   "t": 82.18,
+   "x": 507,
+   "y": 1126,
+   "click": 1
+  },
+  {
+   "t": 82.7,
+   "x": 507,
+   "y": 1126,
+   "show": 0
+  }
+ ],
+ "pops": [
+  7.45,
+  9.19,
+  9.73,
+  15.1,
+  16.05,
+  23.5,
+  23.66,
+  23.82,
+  23.98,
+  31.24,
+  58.2,
+  73.55,
+  84.2
+ ],
+ "whoosh": [
+  [
+   6.45,
+   "soft"
+  ],
+  [
+   25.8,
+   "card"
+  ],
+  [
+   34.4,
+   "scene"
+  ],
+  [
+   50.3,
+   "scene"
+  ],
+  [
+   59.44,
+   "card"
+  ],
+  [
+   63.75,
+   "scene"
+  ],
+  [
+   78.6,
+   "soft"
+  ],
+  [
+   81.15,
+   "card"
+  ]
+ ],
+ "ding": [
+  25.3,
+  49.65,
+  58.25,
+  79.05,
+  82.25
+ ],
+ "ticks": [
+  15.1,
+  16.0
+ ]
 }
