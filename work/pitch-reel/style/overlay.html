@@ -1,0 +1,185 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:F;src:url(fonts/figtree-latin-500-normal.woff2);font-weight:500}
+@font-face{font-family:F;src:url(fonts/figtree-latin-600-normal.woff2);font-weight:600}
+@font-face{font-family:F;src:url(fonts/figtree-latin-700-normal.woff2);font-weight:700}
+@font-face{font-family:F;src:url(fonts/figtree-latin-800-normal.woff2);font-weight:800}
+@font-face{font-family:F;src:url(fonts/figtree-latin-500-italic.woff2);font-weight:500;font-style:italic}
+:root{--card:#DDEBDD;--accent:#6E9F82;--ink:#1F2E26;--deep:#2F4A3B}
+*{margin:0;box-sizing:border-box}
+html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;font-family:F,sans-serif}
+.abs{position:absolute}
+#topfade{left:0;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(15,22,18,.42),transparent)}
+#botfade{left:0;right:0;bottom:0;height:900px;background:linear-gradient(180deg,transparent,rgba(15,22,18,.55) 70%,rgba(15,22,18,.68))}
+.pill{display:inline-flex;align-items:center;gap:12px;background:var(--card);color:var(--ink);font-weight:700;border-radius:999px;padding:12px 24px;font-size:30px;box-shadow:0 8px 22px rgba(0,0,0,.22)}
+.pill.dark{background:var(--deep);color:#fff}
+.card{background:var(--card);border-radius:30px;box-shadow:0 16px 40px rgba(0,0,0,.28);color:var(--ink)}
+/* hook */
+#hook{left:70px;right:70px;top:930px}
+#hook .eyebrow{font-size:28px;letter-spacing:.12em;text-transform:uppercase}
+#hook .big{color:#fff;font-weight:800;font-size:168px;line-height:.92;letter-spacing:-.04em;margin-top:26px;text-shadow:0 6px 30px rgba(0,0,0,.35)}
+#hook .big b{color:var(--card)}
+#hook .sub{color:#F3F7F3;font-weight:500;font-style:italic;font-size:54px;margin-top:30px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
+/* intro */
+#tag{left:64px;top:300px}
+#lower{left:64px;top:1010px;padding:30px 40px 32px}
+#lower .name{font-weight:800;font-size:66px;letter-spacing:-.02em}
+#lower .meta{font-weight:600;font-size:32px;color:var(--deep);margin-top:6px}
+#lower .bar{width:120px;height:8px;border-radius:4px;background:var(--accent);margin-top:18px}
+/* format chip */
+#fmt{left:0;right:0;top:980px;display:flex;justify-content:center;gap:18px}
+#fmt .pill{font-size:36px;padding:16px 30px}
+/* preview list */
+#list{left:90px;right:90px;top:880px;padding:44px 50px 46px}
+#list .h{font-weight:700;font-size:28px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+#list .row{display:flex;align-items:center;gap:26px;margin-top:30px;font-weight:800;font-size:60px;letter-spacing:-.02em}
+#list .row span{display:inline-flex;align-items:center;justify-content:center;width:72px;height:72px;border-radius:50%;background:var(--accent);color:#fff;font-size:30px;font-weight:700;flex:none}
+/* progress */
+#prog{left:64px;right:64px;top:292px;display:flex;gap:12px;align-items:center}
+#prog .seg{flex:1;height:9px;border-radius:5px;background:rgba(255,255,255,.35);overflow:hidden}
+#prog .seg i{display:block;height:100%;width:0;background:var(--card)}
+#prog .lbl{color:#fff;font-weight:700;font-size:28px;margin-left:8px;text-shadow:0 1px 6px rgba(0,0,0,.45);width:80px;text-align:right}
+/* lesson card */
+#lcard{left:76px;right:76px;top:1040px;padding:40px 48px 46px}
+#lcard .num{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:28px;letter-spacing:.06em;padding:8px 18px;border-radius:999px}
+#lcard .tagr{position:absolute;right:46px;top:52px;font-weight:700;font-size:23px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+#lcard h1{font-weight:800;font-size:92px;line-height:1.0;letter-spacing:-.03em;margin-top:22px}
+#lcard .ul{display:block;height:12px;border-radius:6px;background:var(--accent);opacity:.55;margin-top:10px}
+#lcard .sub{font-weight:500;font-style:italic;font-size:40px;line-height:1.25;opacity:.82;margin-top:20px}
+#mini{left:64px;top:340px}
+#mini .pill{font-size:30px;padding:10px 22px 10px 12px}
+#mini .pill span{display:inline-flex;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#fff;align-items:center;justify-content:center;font-size:22px}
+/* extras */
+#chips{left:64px;top:860px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+#chips .pill{font-size:40px;padding:14px 30px}
+#journey{left:70px;right:70px;top:930px;height:180px}
+#journey .line{position:absolute;left:40px;right:40px;top:44px;height:8px;border-radius:4px;background:rgba(255,255,255,.35)}
+#journey .line i{display:block;height:100%;width:0;background:var(--card);border-radius:4px}
+#journey .st{position:absolute;top:0;width:300px;margin-left:-150px;text-align:center}
+#journey .dot{width:96px;height:96px;border-radius:50%;background:var(--card);margin:0 auto;display:flex;align-items:center;justify-content:center;font-size:44px;box-shadow:0 8px 20px rgba(0,0,0,.25)}
+#journey .t{color:#fff;font-weight:800;font-size:36px;margin-top:14px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+#eq{left:64px;right:64px;top:860px;display:flex;flex-direction:column;gap:18px;align-items:flex-start}
+#eq .pill{font-size:38px;padding:16px 30px}
+#eq .pill b{color:var(--accent);font-weight:800}
+/* cta */
+#cta{left:90px;right:90px;top:820px;padding:56px 56px 60px;text-align:center}
+#cta .ic{width:120px;height:120px;border-radius:50%;background:var(--accent);margin:0 auto;display:flex;align-items:center;justify-content:center}
+#cta h2{font-weight:800;font-size:120px;letter-spacing:-.04em;margin-top:26px;line-height:1}
+#cta p{font-weight:600;font-size:44px;color:var(--deep);margin-top:18px}
+#follow{left:0;right:0;top:1330px;text-align:center}
+#follow .pill{font-size:36px;padding:16px 32px}
+/* captions */
+#cap{left:40px;right:40px;text-align:center;font-weight:800;font-size:66px;line-height:1.15;color:#fff;letter-spacing:-.01em;text-shadow:0 3px 0 rgba(0,0,0,.42),0 0 18px rgba(0,0,0,.35)}
+#cap .w{display:inline-block;padding:0 10px;border-radius:14px;margin:0 1px}
+#cap .w.on{background:var(--card);color:var(--ink);text-shadow:none}
+</style></head><body>
+<div id="topfade" class="abs"></div><div id="botfade" class="abs"></div>
+
+<div id="hook" class="abs">
+  <span class="pill eyebrow" id="h-eb">Thursday · half a day</span>
+  <div class="big" id="h-big"><b>11</b> student<br>founders.</div>
+  <div class="sub" id="h-sub">…and I decided who keeps building.</div>
+</div>
+
+<div id="tag" class="abs"><span class="pill dark">WayWithVJ</span></div>
+<div id="lower" class="abs card"><div class="name">Vijaylakshmi</div><div class="meta">LSR · ISB alum · Startup ecosystem</div><div class="bar"></div></div>
+
+<div id="fmt" class="abs"><span class="pill" id="f1">10 min pitch</span><span class="pill dark" id="f2">+ 5 min Q&amp;A</span></div>
+
+<div id="list" class="abs card"><div class="h">4 things to figure out</div>
+  <div class="row" id="r1"><span>01</span>Founder Story</div>
+  <div class="row" id="r2"><span>02</span>Competitive Landscape</div>
+  <div class="row" id="r3"><span>03</span>User Journey</div>
+  <div class="row" id="r4"><span>04</span>Vision + ICP</div>
+</div>
+
+<div id="prog" class="abs"><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="seg"><i></i></div><div class="lbl" id="plbl">01/04</div></div>
+<div id="mini" class="abs"><span class="pill"><span id="m-n">01</span><b id="m-t">Founder Story</b></span></div>
+
+<div id="lcard" class="abs card"><span class="num" id="c-n">01</span><div class="tagr" id="c-tag"></div><h1 id="c-t"></h1><span class="ul" id="c-ul"></span><div class="sub" id="c-sub"></div></div>
+
+<div id="chips" class="abs"><span class="pill" id="ch1">AI startups</span><span class="pill" id="ch2">Consumer brands</span><span class="pill" id="ch3">Family businesses</span></div>
+
+<div id="journey" class="abs"><div class="line"><i id="j-line"></i></div>
+  <div class="st" id="j1" style="left:40px"><div class="dot">🔍</div><div class="t">Discover</div></div>
+  <div class="st" id="j2" style="left:50%"><div class="dot">✨</div><div class="t">Use</div></div>
+  <div class="st" id="j3" style="left:calc(100% - 40px)"><div class="dot">🔁</div><div class="t">Come back</div></div>
+</div>
+
+<div id="eq" class="abs"><span class="pill" id="e1"><b>Vision</b>&nbsp;= the problem you solve</span><span class="pill" id="e2"><b>ICP</b>&nbsp;= who you solve it for</span><span class="pill dark" id="e3">1–3 segments is fine ✓</span></div>
+
+<div id="cta" class="abs card"><div class="ic"><svg width="56" height="64" viewBox="0 0 56 64"><path d="M6 4h44v56L28 46 6 60z" fill="#fff"/></svg></div><h2>Save this</h2><p>&amp; send it to your co-founder</p></div>
+<div id="follow" class="abs"><span class="pill dark">Follow WayWithVJ for more</span></div>
+
+<div id="cap" class="abs"></div>
+
+<script>
+const CAPS = __CAPS__;
+const CARDS=[
+ {n:'01',t:'Founder Story',tag:'Founder–Market Fit',sub:'How did you discover this problem, and why does it matter to you?',t0:25.80,t1:34.40,ul:330},
+ {n:'02',t:'Competitive Landscape',tag:'Know the market',sub:'Who are the incumbents, what do they offer, and where’s your edge?',t0:34.50,t1:50.30,ul:420},
+ {n:'03',t:'User Journey',tag:'Every step',sub:'From the moment someone discovers you to when they come back.',t0:50.47,t1:59.30,ul:330},
+ {n:'04',t:'Vision + ICP',tag:'Initial pitch',sub:'The problem you want to solve, and who you’re solving it for.',t0:59.44,t1:81.00,ul:300}];
+const $=id=>document.getElementById(id);
+const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
+const eo=x=>1-Math.pow(1-cl(x),3);           // ease out cubic
+const eb=x=>{x=cl(x);const c=1.5;return 1+(c+1)*Math.pow(x-1,3)+c*Math.pow(x-1,2)}; // ease out back
+// enter/exit envelope: returns {p:0..1 visibility, y:offset}
+function env(t,a,b,inD=.35,outD=.25){ if(t<a||t>b+outD) return 0; if(t<a+inD) return (t-a)/inD; if(t>b) return 1-(t-b)/outD; return 1;}
+function show(el,t,a,b,{dy=40,inD=.35,outD=.25,scale=false}={}){
+  const e=typeof el==='string'?$(el):el; const v=env(t,a,b,inD,outD);
+  if(v<=0){e.style.opacity=0;return 0}
+  const entering=t<a+inD; const k=entering?eb(v):eo(v);
+  e.style.opacity=cl(entering?v*1.6:v);
+  e.style.transform=scale?`scale(${0.9+0.1*k})`:`translateY(${(1-k)*dy}px)`;
+  return v;
+}
+function render(t){
+  const END=85.6;
+  // hook
+  show('h-eb',t,0.25,6.2,{dy:20}); show('h-big',t,1.40,6.2,{dy:60,inD:.45}); show('h-sub',t,4.20,6.2,{dy:20});
+  $('hook').style.opacity=1;
+  // intro
+  show('tag',t,7.45,14.25,{dy:-20}); show('lower',t,8.35,14.0,{dy:50});
+  // format chips
+  show('f1',t,15.10,17.95,{dy:30,scale:true}); show('f2',t,16.05,17.95,{dy:30,scale:true});
+  // preview list
+  const lv=show('list',t,23.45,25.55,{dy:60,inD:.35,outD:.3});
+  ['r1','r2','r3','r4'].forEach((r,i)=>show(r,t,23.6+i*0.16,25.55,{dy:24,inD:.3,outD:.3}));
+  // progress + cards
+  const inLessons=t>=25.7&&t<=81.2;
+  $('prog').style.opacity=inLessons?cl(Math.min((t-25.7)/.3,(81.2-t)/.25)):0;
+  let curCard=null;
+  CARDS.forEach((c,i)=>{ const seg=$('prog').children[i].firstElementChild;
+    seg.style.width=(t>=c.t1?100:t>=c.t0?100*(t-c.t0)/(c.t1-c.t0):0)+'%';
+    if(t>=c.t0-0.05&&t<c.t1) curCard=c; });
+  let fullCard=false;
+  if(curCard){
+    const c=curCard; $('plbl').textContent=c.n+'/04';
+    $('c-n').textContent=c.n; $('c-t').textContent=c.t; $('c-tag').textContent=c.tag; $('c-sub').textContent=c.sub; $('c-ul').style.width=c.ul*eo((t-c.t0-0.25)/.4)+'px';
+    const hold=4.3; fullCard=t<c.t0+hold+0.25;
+    show('lcard',t,c.t0,c.t0+hold,{dy:80,inD:.4,outD:.25});
+    $('m-n').textContent=c.n; $('m-t').textContent=c.t;
+    show('mini',t,c.t0+hold+0.1,c.t1-0.15,{dy:-16,inD:.3,outD:.2});
+  } else { $('lcard').style.opacity=0; $('mini').style.opacity=0; }
+  // extras
+  show('ch1',t,39.40,45.9,{dy:20,scale:true}); show('ch2',t,40.05,45.9,{dy:20,scale:true}); show('ch3',t,41.65,45.9,{dy:20,scale:true});
+  const jv=show('journey',t,53.85,58.95,{dy:20});
+  $('j-line').style.width=(100*eo((t-53.95)/1.6))+'%';
+  show('j1',t,53.9,58.95,{dy:16,scale:true}); show('j2',t,54.65,58.95,{dy:16,scale:true}); show('j3',t,55.30,58.95,{dy:16,scale:true});
+  show('e1',t,66.50,76.6,{dy:20,scale:true}); show('e2',t,69.10,76.6,{dy:20,scale:true}); show('e3',t,73.55,76.6,{dy:20,scale:true});
+  // cta
+  show('cta',t,81.15,END+1,{dy:70,inD:.45}); show('follow',t,84.20,END+1,{dy:20,scale:true});
+  // captions
+  const hideCap = t<6.4 || t>81.1 || (t>23.4&&t<25.75);
+  const capY = fullCard ? 932 : 1262;
+  const cap=$('cap'); cap.style.top=capY+'px';
+  const ch = hideCap?null:CAPS.find(c=>t>=c.s&&t<c.e);
+  if(!ch){cap.innerHTML='';}else{
+    cap.innerHTML=ch.words.map((w,i)=>{const nx=ch.words[i+1]; const on=t>=w.s&&(!nx||t<nx.s); return `<span class="w${on?' on':''}">${w.w}</span>`}).join(' ');
+    const a=cl((t-ch.s)/.08); cap.style.opacity=a; cap.style.transform=`translateY(${(1-a)*8}px)`;
+  }
+}
+window.render=render; render(0);
+</script></body></html>

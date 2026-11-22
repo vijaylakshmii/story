@@ -1,0 +1,76 @@
+{
+ "segments": [
+  {
+   "sec": "hook",
+   "take": 2,
+   "src_in": 8.46,
+   "src_out": 14.42,
+   "start": 0.25,
+   "end": 6.21,
+   "pieces": 1
+  },
+  {
+   "sec": "intro",
+   "take": 1,
+   "src_in": 17.68,
+   "src_out": 25.232,
+   "start": 6.53,
+   "end": 14.081,
+   "pieces": 1
+  },
+  {
+   "sec": "format",
+   "take": 3,
+   "src_in": 14.82,
+   "src_out": 25.84,
+   "start": 14.401,
+   "end": 25.421,
+   "pieces": 1
+  },
+  {
+   "sec": "s1",
+   "take": 1,
+   "src_in": 33.32,
+   "src_out": 41.7,
+   "start": 25.741,
+   "end": 34.121,
+   "pieces": 2
+  },
+  {
+   "sec": "s2",
+   "take": 3,
+   "src_in": 34.36,
+   "src_out": 50.129,
+   "start": 34.441,
+   "end": 50.049,
+   "pieces": 3
+  },
+  {
+   "sec": "s3",
+   "take": 1,
+   "src_in": 56.56,
+   "src_out": 65.25,
+   "start": 50.369,
+   "end": 59.059,
+   "pieces": 2
+  },
+  {
+   "sec": "s4",
+   "take": 1,
+   "src_in": 65.62,
+   "src_out": 87.54,
+   "start": 59.379,
+   "end": 80.819,
+   "pieces": 3
+  },
+  {
+   "sec": "cta",
+   "take": 2,
+   "src_in": 91.67,
+   "src_out": 95.73,
+   "start": 81.139,
+   "end": 85.199,
+   "pieces": 1
+  }
+ ]
+}

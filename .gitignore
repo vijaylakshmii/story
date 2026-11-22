@@ -9,3 +9,7 @@ work/*/review/packet/
 *.wav
 *.jpg
 *.png
+*.m4a
+*.f32
+work/*/base.mp4
+work/*/style/overlay_built.html

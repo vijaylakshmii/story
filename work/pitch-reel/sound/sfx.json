@@ -1,0 +1,170 @@
+[
+ {
+  "event": "hook title",
+  "type": "whoosh",
+  "motion_peak": 1.56,
+  "sfx_peak": 0.2,
+  "start": 1.36,
+  "gain_db": -21.0
+ },
+ {
+  "event": "name card",
+  "type": "whoosh",
+  "motion_peak": 8.51,
+  "sfx_peak": 0.2,
+  "start": 8.31,
+  "gain_db": -21.0
+ },
+ {
+  "event": "4-things list",
+  "type": "whoosh",
+  "motion_peak": 23.61,
+  "sfx_peak": 0.2,
+  "start": 23.41,
+  "gain_db": -25.0
+ },
+ {
+  "event": "card 01",
+  "type": "whoosh",
+  "motion_peak": 25.96,
+  "sfx_peak": 0.2,
+  "start": 25.76,
+  "gain_db": -21.0
+ },
+ {
+  "event": "card 02",
+  "type": "whoosh",
+  "motion_peak": 34.66,
+  "sfx_peak": 0.2,
+  "start": 34.46,
+  "gain_db": -21.0
+ },
+ {
+  "event": "card 03",
+  "type": "whoosh",
+  "motion_peak": 50.63,
+  "sfx_peak": 0.2,
+  "start": 50.43,
+  "gain_db": -21.0
+ },
+ {
+  "event": "card 04",
+  "type": "whoosh",
+  "motion_peak": 59.6,
+  "sfx_peak": 0.2,
+  "start": 59.4,
+  "gain_db": -21.0
+ },
+ {
+  "event": "save card",
+  "type": "whoosh",
+  "motion_peak": 81.31,
+  "sfx_peak": 0.2,
+  "start": 81.11,
+  "gain_db": -21.0
+ },
+ {
+  "event": "WayWithVJ tag",
+  "type": "pop",
+  "motion_peak": 7.53,
+  "sfx_peak": 0.004,
+  "start": 7.526,
+  "gain_db": -22.0
+ },
+ {
+  "event": "10 min chip",
+  "type": "pop",
+  "motion_peak": 15.18,
+  "sfx_peak": 0.004,
+  "start": 15.176,
+  "gain_db": -22.0
+ },
+ {
+  "event": "5 min chip",
+  "type": "pop",
+  "motion_peak": 16.13,
+  "sfx_peak": 0.004,
+  "start": 16.126,
+  "gain_db": -22.0
+ },
+ {
+  "event": "AI chip",
+  "type": "pop",
+  "motion_peak": 39.48,
+  "sfx_peak": 0.004,
+  "start": 39.476,
+  "gain_db": -22.0
+ },
+ {
+  "event": "consumer chip",
+  "type": "pop",
+  "motion_peak": 40.13,
+  "sfx_peak": 0.004,
+  "start": 40.126,
+  "gain_db": -22.0
+ },
+ {
+  "event": "family chip",
+  "type": "pop",
+  "motion_peak": 41.73,
+  "sfx_peak": 0.004,
+  "start": 41.726,
+  "gain_db": -22.0
+ },
+ {
+  "event": "discover",
+  "type": "pop",
+  "motion_peak": 53.98,
+  "sfx_peak": 0.004,
+  "start": 53.976,
+  "gain_db": -22.0
+ },
+ {
+  "event": "use",
+  "type": "pop",
+  "motion_peak": 54.73,
+  "sfx_peak": 0.004,
+  "start": 54.726,
+  "gain_db": -22.0
+ },
+ {
+  "event": "come back",
+  "type": "pop",
+  "motion_peak": 55.38,
+  "sfx_peak": 0.004,
+  "start": 55.376,
+  "gain_db": -22.0
+ },
+ {
+  "event": "vision chip",
+  "type": "pop",
+  "motion_peak": 66.58,
+  "sfx_peak": 0.004,
+  "start": 66.576,
+  "gain_db": -22.0
+ },
+ {
+  "event": "icp chip",
+  "type": "pop",
+  "motion_peak": 69.18,
+  "sfx_peak": 0.004,
+  "start": 69.176,
+  "gain_db": -22.0
+ },
+ {
+  "event": "segments chip",
+  "type": "pop",
+  "motion_peak": 73.63,
+  "sfx_peak": 0.004,
+  "start": 73.626,
+  "gain_db": -22.0
+ },
+ {
+  "event": "follow pill",
+  "type": "pop",
+  "motion_peak": 84.28,
+  "sfx_peak": 0.004,
+  "start": 84.276,
+  "gain_db": -22.0
+ }
+]
