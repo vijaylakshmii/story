@@ -23,6 +23,15 @@ def ding():
     n=int(0.9*SR); t=np.arange(n)/SR
     x=(np.sin(2*np.pi*1318.5*t)+0.5*np.sin(2*np.pi*1975.5*t)+0.25*np.sin(2*np.pi*2637*t))*env(n,0.002,0.28)
     return x/np.abs(x).max()
+def latch():
+    # mechanical lock/latch: low thunk + two quick metallic clicks, no tonal ring
+    n=int(0.16*SR); t=np.arange(n)/SR; x=np.zeros(n)
+    thunk=np.sin(2*np.pi*140*t)*env(n,0.001,0.018)*0.8+bp(rng.standard_normal(n),300,1200)*env(n,0.0008,0.012)*0.6
+    x+=thunk
+    for off,amp in [(0,1.0),(int(0.045*SR),0.75)]:
+        m=int(0.015*SR); c=bp(rng.standard_normal(m),2500,9000)*env(m,0.0003,0.003)*amp
+        x[off:off+m]+=c
+    return x/np.abs(x).max()
 def tick():
     n=int(0.03*SR); t=np.arange(n)/SR; x=np.sin(2*np.pi*2600*t)*env(n,0.0003,0.004)+bp(rng.standard_normal(n),3000,9000)*env(n,0.0002,0.002)*0.5
     return x/np.abs(x).max()
@@ -53,7 +62,7 @@ for c in T["cursor"]:
     if c.get("click"): place(mouse(),c["t"],-11,"mouse")
 for t in T["pops"]: place(pop(),t+0.08,-19,"pop",0.004)
 for t,kind in T["whoosh"]: place(whoosh(),t+0.16,{"card":-18,"scene":-16,"soft":-22}[kind],"whoosh:"+kind,0.2)
-for t in T["ding"]: place(ding(),t,-19,"ding")
+for t in T["ding"]: place(latch(),t,-14,"latch")
 a,b=T["ticks"]
 for k in range(10): place(tick(),a+k*(b-a)/9,-22,"tick")
 bus=np.clip(bus,-1,1).astype(np.float32)
