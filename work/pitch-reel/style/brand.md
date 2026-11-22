@@ -10,3 +10,4 @@
 - **Grade:** slight contrast +, saturation −15%, bottom fade for legibility
 - **Safe zones:** nothing in top 14% / bottom 22% / right 12%; nothing over the face
 - Template: `pal.html`-style layout (rounded cards), replaces the earlier paper-grid look
+- **Channel tag:** small "WayWithVJ" pill (sage card colour, ink text, Figtree 700) during the intro, top-left below the progress-bar zone; repeated at the end beside "Save this"
