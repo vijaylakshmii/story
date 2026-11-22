@@ -13,3 +13,5 @@ ffmpeg -v error -y -i out/video_noaudio2.mp4 -i sound/master2.wav -filter_comple
  -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p -r 30 -c:a aac -b:a 320k -ar 48000 -movflags +faststart out/final_v2.mp4
 ffprobe -v error -show_entries format=duration:stream=codec_name,width,height,r_frame_rate -of compact out/final_v2.mp4
 ffmpeg -nostats -i out/final_v2.mp4 -af ebur128=peak=true -f null - 2>&1 | grep -E "^\s+(I|Peak):"
+# v3: speed the finished reel up 10% (pitch-preserved audio)
+ffmpeg -v error -y -i out/final_v2.mp4 -filter_complex "[0:v]setpts=PTS/1.1,fps=30[v];[0:a]atempo=1.1,alimiter=limit=0.84:attack=5:release=60:level=disabled[a]" -map "[v]" -map "[a]" -c:v libx264 -preset medium -crf 17 -pix_fmt yuv420p -c:a aac -b:a 320k -ar 48000 -movflags +faststart out/final_v3.mp4
