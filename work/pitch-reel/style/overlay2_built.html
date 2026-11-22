@@ -56,7 +56,7 @@ body.light .pl{background:rgba(31,46,38,.12);color:var(--deep);border-color:rgba
 body.light .pl.cur{background:var(--deep);color:#fff;border-color:var(--deep)}
 body.light .pl.done{background:var(--accent);color:#fff;border-color:var(--accent)}
 /* lesson card */
-#lcard{left:64px;right:130px;top:1040px;padding:40px 48px 46px}
+#lcard{left:64px;right:130px;top:1090px;padding:40px 48px 46px}
 #lcard .num{display:inline-block;background:var(--accent);color:#fff;font-weight:700;font-size:28px;letter-spacing:.06em;padding:8px 18px;border-radius:999px}
 #lcard .tagr{position:absolute;right:46px;top:52px;font-weight:700;font-size:23px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
 #lcard h1{font-weight:800;font-size:84px;line-height:1.0;letter-spacing:-.03em;margin-top:22px}
@@ -101,11 +101,11 @@ body.light .pl.done{background:var(--accent);color:#fff;border-color:var(--accen
 #segok{left:64px;top:1225px}
 #segok .pill{background:var(--deep);color:#fff;font-size:30px}
 /* recap */
-#recap{left:64px;right:130px;top:700px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+#recap{left:64px;right:130px;top:790px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .rc{height:200px;border-radius:26px;background:var(--card);padding:24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 10px 24px rgba(0,0,0,.14)}
 .rc .n{display:flex;justify-content:space-between;font-weight:800;font-size:28px;color:var(--accent)}
 .rc .t{font-weight:800;font-size:40px;line-height:1.05;color:var(--ink)}
-#recapHead{left:64px;top:600px;font-weight:800;font-size:52px;color:var(--ink);letter-spacing:-.02em}
+#recapHead{left:64px;top:690px;font-weight:800;font-size:52px;color:var(--ink);letter-spacing:-.02em}
 /* cta */
 #cta{left:64px;right:130px;top:1050px;padding:34px 40px 38px;text-align:center}
 #cta .ic{width:84px;height:84px;border-radius:50%;background:var(--accent);margin:0 auto;display:flex;align-items:center;justify-content:center}
@@ -178,42 +178,350 @@ body.light #cap .w.on{background:var(--accent);color:#fff}
 
 <script>
 const CAPS=[{"s": 0.31, "e": 1.47, "words": [{"w": "On", "s": 0.31}, {"w": "Thursday", "s": 0.75}]}, {"s": 1.47, "e": 2.49, "words": [{"w": "11", "s": 1.47}, {"w": "student", "s": 1.77}, {"w": "founders", "s": 2.0300000000000002}]}, {"s": 2.49, "e": 3.31, "words": [{"w": "pitched", "s": 2.49}, {"w": "their", "s": 2.81}, {"w": "startups", "s": 3.07}]}, {"s": 3.31, "e": 3.95, "words": [{"w": "to", "s": 3.31}, {"w": "me", "s": 3.57}, {"w": "and", "s": 3.71}]}, {"s": 3.95, "e": 4.37, "words": [{"w": "I", "s": 3.95}, {"w": "had", "s": 4.13}, {"w": "to", "s": 4.29}]}, {"s": 4.37, "e": 5.15, "words": [{"w": "decide", "s": 4.37}, {"w": "which", "s": 4.67}, {"w": "ones", "s": 4.93}]}, {"s": 5.15, "e": 5.61, "words": [{"w": "get", "s": 5.15}, {"w": "to", "s": 5.35}, {"w": "keep", "s": 5.49}]}, {"s": 5.61, "e": 6.279999999999999, "words": [{"w": "building", "s": 5.61}]}, {"s": 6.59, "e": 7.03, "words": [{"w": "Hi", "s": 6.59}]}, {"s": 7.03, "e": 8.23, "words": [{"w": "welcome", "s": 7.03}, {"w": "to", "s": 7.35}, {"w": "WayWithVJ", "s": 7.49}]}, {"s": 8.23, "e": 9.13, "words": [{"w": "I'm", "s": 8.23}, {"w": "Vijaylakshmi", "s": 8.41}]}, {"s": 9.13, "e": 9.73, "words": [{"w": "an", "s": 9.13}, {"w": "LSR", "s": 9.19}, {"w": "and", "s": 9.61}]}, {"s": 9.73, "e": 10.63, "words": [{"w": "ISB", "s": 9.73}, {"w": "alum", "s": 10.11}, {"w": "and", "s": 10.35}]}, {"s": 10.63, "e": 11.13, "words": [{"w": "I", "s": 10.63}, {"w": "spend", "s": 10.77}, {"w": "my", "s": 10.89}]}, {"s": 11.13, "e": 11.87, "words": [{"w": "days", "s": 11.13}, {"w": "doing", "s": 11.37}, {"w": "all", "s": 11.57}]}, {"s": 11.87, "e": 12.47, "words": [{"w": "kinds", "s": 11.87}, {"w": "of", "s": 12.01}, {"w": "exciting", "s": 12.17}]}, {"s": 12.47, "e": 13.05, "words": [{"w": "things", "s": 12.47}, {"w": "in", "s": 12.75}, {"w": "the", "s": 12.93}]}, {"s": 13.05, "e": 14.16, "words": [{"w": "startup", "s": 13.05}, {"w": "ecosystem", "s": 13.27}]}, {"s": 14.461, "e": 15.161, "words": [{"w": "Every", "s": 14.461}, {"w": "team", "s": 14.781}, {"w": "got", "s": 14.961}]}, {"s": 15.161, "e": 15.781, "words": [{"w": "10", "s": 15.161}, {"w": "minutes", "s": 15.381}, {"w": "to", "s": 15.561}]}, {"s": 15.781, "e": 16.321, "words": [{"w": "pitch", "s": 15.781}, {"w": "and", "s": 15.961}, {"w": "5", "s": 16.121000000000002}]}, {"s": 16.321, "e": 16.901, "words": [{"w": "minutes", "s": 16.321}, {"w": "of", "s": 16.561}, {"w": "me", "s": 16.761}]}, {"s": 16.901, "e": 17.561, "words": [{"w": "cross", "s": 16.901}, {"w": "questioning", "s": 17.141}]}, {"s": 17.561, "e": 18.441, "words": [{"w": "and", "s": 17.561}, {"w": "by", "s": 18.141}, {"w": "the", "s": 18.321}]}, {"s": 18.441, "e": 18.861, "words": [{"w": "end", "s": 18.441}, {"w": "of", "s": 18.641}, {"w": "the", "s": 18.781}]}, {"s": 18.861, "e": 19.721, "words": [{"w": "day", "s": 18.861}, {"w": "I", "s": 19.061}, {"w": "noticed", "s": 19.441}]}, {"s": 19.721, "e": 20.281, "words": [{"w": "I", "s": 19.721}, {"w": "was", "s": 19.941}, {"w": "asking", "s": 20.021}]}, {"s": 20.281, "e": 21.081, "words": [{"w": "the", "s": 20.281}, {"w": "same", "s": 20.481}, {"w": "questions", "s": 20.741}]}, {"s": 21.081, "e": 22.061, "words": [{"w": "again", "s": 21.081}, {"w": "and", "s": 21.421}, {"w": "again", "s": 21.541}]}, {"s": 22.061, "e": 22.501, "words": [{"w": "So", "s": 22.061}, {"w": "if", "s": 22.141}, {"w": "you", "s": 22.341}]}, {"s": 22.501, "e": 23.241, "words": [{"w": "are", "s": 22.501}, {"w": "pitching", "s": 22.621}, {"w": "soon", "s": 22.821}]}, {"s": 23.241, "e": 23.701, "words": [{"w": "here", "s": 23.241}, {"w": "are", "s": 23.361}, {"w": "four", "s": 23.521}]}, {"s": 23.701, "e": 24.341, "words": [{"w": "things", "s": 23.701}, {"w": "I", "s": 23.961}, {"w": "want", "s": 24.161}]}, {"s": 24.341, "e": 24.781, "words": [{"w": "you", "s": 24.341}, {"w": "to", "s": 24.521}, {"w": "have", "s": 24.621}]}, {"s": 24.781, "e": 25.591, "words": [{"w": "figured", "s": 24.781}, {"w": "out", "s": 24.961}]}, {"s": 25.801, "e": 26.521, "words": [{"w": "Number", "s": 25.801}, {"w": "one", "s": 26.081}, {"w": "is", "s": 26.341}]}, {"s": 26.521, "e": 27.531000000000002, "words": [{"w": "the", "s": 26.521}, {"w": "founder", "s": 26.661}, {"w": "story", "s": 26.861}]}, {"s": 27.581, "e": 28.061, "words": [{"w": "How", "s": 27.581}, {"w": "did", "s": 27.721}, {"w": "you", "s": 27.861}]}, {"s": 28.061, "e": 28.941, "words": [{"w": "discover", "s": 28.061}, {"w": "this", "s": 28.341}, {"w": "problem", "s": 28.581}]}, {"s": 28.941, "e": 29.461, "words": [{"w": "and", "s": 28.941}, {"w": "why", "s": 29.181}, {"w": "does", "s": 29.321}]}, {"s": 29.461, "e": 29.961, "words": [{"w": "it", "s": 29.461}, {"w": "matter", "s": 29.601}, {"w": "so", "s": 29.761}]}, {"s": 29.961, "e": 30.931, "words": [{"w": "much", "s": 29.961}, {"w": "to", "s": 30.161}, {"w": "you?", "s": 30.321}]}, {"s": 31.001, "e": 31.881, "words": [{"w": "That's", "s": 31.001}, {"w": "founder", "s": 31.241}, {"w": "-market", "s": 31.621}]}, {"s": 31.881, "e": 32.701, "words": [{"w": "fit", "s": 31.881}, {"w": "and", "s": 32.161}, {"w": "it's", "s": 32.541}]}, {"s": 32.701, "e": 33.221, "words": [{"w": "the", "s": 32.701}, {"w": "first", "s": 32.801}, {"w": "thing", "s": 33.001}]}, {"s": 33.221, "e": 33.761, "words": [{"w": "that", "s": 33.221}, {"w": "I", "s": 33.401}, {"w": "look", "s": 33.601}]}, {"s": 33.761, "e": 34.351, "words": [{"w": "for", "s": 33.761}]}, {"s": 34.501, "e": 35.221, "words": [{"w": "Number", "s": 34.501}, {"w": "two", "s": 34.741}, {"w": "is", "s": 35.021}]}, {"s": 35.221, "e": 36.711, "words": [{"w": "the", "s": 35.221}, {"w": "competitive", "s": 35.361}, {"w": "landscape", "s": 35.781}]}, {"s": 36.78, "e": 37.54, "words": [{"w": "These", "s": 36.78}, {"w": "startups", "s": 36.92}, {"w": "that", "s": 37.26}]}, {"s": 37.54, "e": 38.06, "words": [{"w": "were", "s": 37.54}, {"w": "pitching", "s": 37.68}, {"w": "to", "s": 37.86}]}, {"s": 38.06, "e": 38.66, "words": [{"w": "me", "s": 38.06}, {"w": "were", "s": 38.2}, {"w": "all", "s": 38.38}]}, {"s": 38.66, "e": 39.42, "words": [{"w": "over", "s": 38.66}, {"w": "the", "s": 38.84}, {"w": "place", "s": 38.94}]}, {"s": 39.42, "e": 40.06, "words": [{"w": "AI", "s": 39.42}, {"w": "startups", "s": 39.58}]}, {"s": 40.06, "e": 40.84, "words": [{"w": "consumer", "s": 40.06}, {"w": "brands", "s": 40.34}]}, {"s": 40.84, "e": 41.68, "words": [{"w": "even", "s": 40.84}, {"w": "extensions", "s": 41.04}, {"w": "of", "s": 41.42}]}, {"s": 41.68, "e": 42.71, "words": [{"w": "family", "s": 41.68}, {"w": "businesses", "s": 41.94}]}, {"s": 42.78, "e": 43.38, "words": [{"w": "I", "s": 42.78}, {"w": "can't", "s": 42.94}, {"w": "know", "s": 43.2}]}, {"s": 43.38, "e": 44.14, "words": [{"w": "every", "s": 43.38}, {"w": "industry", "s": 43.56}, {"w": "in", "s": 43.96}]}, {"s": 44.14, "e": 44.7, "words": [{"w": "depth", "s": 44.14}, {"w": "so", "s": 44.3}, {"w": "give", "s": 44.52}]}, {"s": 44.7, "e": 45.26, "words": [{"w": "me", "s": 44.7}, {"w": "a", "s": 44.88}, {"w": "quick", "s": 45.06}]}, {"s": 45.26, "e": 46.12, "words": [{"w": "overview", "s": 45.26}, {"w": "of", "s": 45.78}, {"w": "the", "s": 46.0}]}, {"s": 46.12, "e": 46.72, "words": [{"w": "market", "s": 46.12}]}, {"s": 46.72, "e": 47.14, "words": [{"w": "Who", "s": 46.72}, {"w": "are", "s": 46.96}, {"w": "the", "s": 47.08}]}, {"s": 47.14, "e": 47.84, "words": [{"w": "incumbents?", "s": 47.14}]}, {"s": 47.84, "e": 48.28, "words": [{"w": "What", "s": 47.84}, {"w": "do", "s": 47.94}, {"w": "they", "s": 48.08}]}, {"s": 48.28, "e": 49.14, "words": [{"w": "offer", "s": 48.28}, {"w": "and", "s": 48.56}, {"w": "where's", "s": 48.9}]}, {"s": 49.14, "e": 50.050000000000004, "words": [{"w": "your", "s": 49.14}, {"w": "differentiation?", "s": 49.26}]}, {"s": 50.469, "e": 51.149, "words": [{"w": "Number", "s": 50.469}, {"w": "three", "s": 50.689}, {"w": "is", "s": 50.989}]}, {"s": 51.149, "e": 52.239000000000004, "words": [{"w": "the", "s": 51.149}, {"w": "user", "s": 51.269}, {"w": "journey", "s": 51.489}]}, {"s": 52.249, "e": 52.949, "words": [{"w": "At", "s": 52.249}, {"w": "every", "s": 52.409}, {"w": "step", "s": 52.669}]}, {"s": 52.949, "e": 53.629, "words": [{"w": "from", "s": 52.949}, {"w": "the", "s": 53.229}, {"w": "moment", "s": 53.349}]}, {"s": 53.629, "e": 54.269, "words": [{"w": "someone", "s": 53.629}, {"w": "discovers", "s": 53.949}]}, {"s": 54.269, "e": 55.009, "words": [{"w": "you", "s": 54.269}, {"w": "to", "s": 54.669}, {"w": "when", "s": 54.849}]}, {"s": 55.009, "e": 55.549, "words": [{"w": "they", "s": 55.009}, {"w": "keep", "s": 55.149}, {"w": "coming", "s": 55.309}]}, {"s": 55.549, "e": 56.089, "words": [{"w": "back", "s": 55.549}]}, {"s": 56.089, "e": 57.099000000000004, "words": [{"w": "what's", "s": 56.089}, {"w": "your", "s": 56.329}, {"w": "plan?", "s": 56.429}]}, {"s": 57.169, "e": 57.749, "words": [{"w": "I", "s": 57.169}, {"w": "need", "s": 57.429}, {"w": "to", "s": 57.589}]}, {"s": 57.749, "e": 58.369, "words": [{"w": "know", "s": 57.749}, {"w": "you've", "s": 57.929}, {"w": "thought", "s": 58.189}]}, {"s": 58.369, "e": 59.179, "words": [{"w": "it", "s": 58.369}, {"w": "through", "s": 58.569}]}, {"s": 59.439, "e": 60.259, "words": [{"w": "And", "s": 59.439}, {"w": "finally", "s": 59.519}]}, {"s": 60.259, "e": 60.879, "words": [{"w": "the", "s": 60.259}, {"w": "vision", "s": 60.339}, {"w": "and", "s": 60.639}]}, {"s": 60.879, "e": 61.699, "words": [{"w": "ICP", "s": 60.879}]}, {"s": 61.699, "e": 62.359, "words": [{"w": "These", "s": 61.699}, {"w": "are", "s": 61.899}, {"w": "initial", "s": 62.039}]}, {"s": 62.359, "e": 62.819, "words": [{"w": "pitches", "s": 62.359}]}, {"s": 62.819, "e": 63.159, "words": [{"w": "so", "s": 62.819}, {"w": "I'm", "s": 62.939}, {"w": "not", "s": 63.059}]}, {"s": 63.159, "e": 64.039, "words": [{"w": "expecting", "s": 63.159}, {"w": "a", "s": 63.579}, {"w": "five", "s": 63.799}]}, {"s": 64.039, "e": 64.539, "words": [{"w": "or", "s": 64.039}, {"w": "10", "s": 64.219}, {"w": "-year", "s": 64.459}]}, {"s": 64.539, "e": 65.059, "words": [{"w": "plan", "s": 64.539}]}, {"s": 65.059, "e": 65.779, "words": [{"w": "Things", "s": 65.059}, {"w": "change", "s": 65.219}]}, {"s": 65.779, "e": 66.839, "words": [{"w": "but", "s": 65.779}, {"w": "your", "s": 66.259}, {"w": "product", "s": 66.539}]}, {"s": 66.839, "e": 67.559, "words": [{"w": "vision", "s": 66.839}, {"w": "is", "s": 67.139}, {"w": "really", "s": 67.339}]}, {"s": 67.559, "e": 68.239, "words": [{"w": "the", "s": 67.559}, {"w": "problem", "s": 67.719}, {"w": "you", "s": 68.039}]}, {"s": 68.239, "e": 68.779, "words": [{"w": "want", "s": 68.239}, {"w": "to", "s": 68.379}, {"w": "solve", "s": 68.499}]}, {"s": 68.779, "e": 69.639, "words": [{"w": "and", "s": 68.779}, {"w": "your", "s": 68.999}, {"w": "ICP", "s": 69.139}]}, {"s": 69.639, "e": 70.199, "words": [{"w": "is", "s": 69.639}, {"w": "who", "s": 69.879}, {"w": "you're", "s": 70.039}]}, {"s": 70.199, "e": 71.229, "words": [{"w": "solving", "s": 70.199}, {"w": "it", "s": 70.459}, {"w": "for", "s": 70.679}]}, {"s": 71.239, "e": 71.779, "words": [{"w": "And", "s": 71.239}, {"w": "it", "s": 71.419}, {"w": "doesn't", "s": 71.539}]}, {"s": 71.779, "e": 72.219, "words": [{"w": "have", "s": 71.779}, {"w": "to", "s": 71.979}, {"w": "be", "s": 72.059}]}, {"s": 72.219, "e": 73.529, "words": [{"w": "one", "s": 72.219}, {"w": "target", "s": 72.479}, {"w": "segment", "s": 72.839}]}, {"s": 73.599, "e": 74.099, "words": [{"w": "Two", "s": 73.599}, {"w": "or", "s": 73.739}, {"w": "three", "s": 73.899}]}, {"s": 74.099, "e": 75.12899999999999, "words": [{"w": "is", "s": 74.099}, {"w": "also", "s": 74.239}, {"w": "fine", "s": 74.459}]}, {"s": 75.199, "e": 75.659, "words": [{"w": "Obviously", "s": 75.199}]}, {"s": 75.659, "e": 75.959, "words": [{"w": "a", "s": 75.659}, {"w": "lot", "s": 75.759}, {"w": "of", "s": 75.859}]}, {"s": 75.959, "e": 76.659, "words": [{"w": "this", "s": 75.959}, {"w": "changes", "s": 76.119}, {"w": "once", "s": 76.379}]}, {"s": 76.659, "e": 77.179, "words": [{"w": "you", "s": 76.659}, {"w": "have", "s": 76.839}, {"w": "proof", "s": 76.959}]}, {"s": 77.179, "e": 77.739, "words": [{"w": "of", "s": 77.179}, {"w": "work", "s": 77.359}]}, {"s": 77.739, "e": 78.139, "words": [{"w": "but", "s": 77.739}, {"w": "for", "s": 77.839}, {"w": "an", "s": 77.999}]}, {"s": 78.139, "e": 78.979, "words": [{"w": "initial", "s": 78.139}, {"w": "pitch", "s": 78.479}]}, {"s": 78.979, "e": 79.479, "words": [{"w": "these", "s": 78.979}, {"w": "are", "s": 79.219}, {"w": "the", "s": 79.399}]}, {"s": 79.479, "e": 79.999, "words": [{"w": "things", "s": 79.479}, {"w": "that", "s": 79.699}, {"w": "you", "s": 79.879}]}, {"s": 79.999, "e": 80.399, "words": [{"w": "should", "s": 79.999}, {"w": "keep", "s": 80.099}, {"w": "in", "s": 80.279}]}, {"s": 80.399, "e": 81.009, "words": [{"w": "mind", "s": 80.399}]}, {"s": 81.209, "e": 81.549, "words": [{"w": "Are", "s": 81.209}, {"w": "you", "s": 81.229}, {"w": "pitching", "s": 81.329}]}, {"s": 81.549, "e": 82.189, "words": [{"w": "soon?", "s": 81.549}]}, {"s": 82.189, "e": 82.929, "words": [{"w": "Save", "s": 82.189}, {"w": "this", "s": 82.449}, {"w": "and", "s": 82.709}]}, {"s": 82.929, "e": 83.309, "words": [{"w": "send", "s": 82.929}, {"w": "it", "s": 83.089}, {"w": "to", "s": 83.189}]}, {"s": 83.309, "e": 83.889, "words": [{"w": "your", "s": 83.309}, {"w": "co", "s": 83.409}, {"w": "-founder", "s": 83.549}]}, {"s": 83.889, "e": 84.709, "words": [{"w": "and", "s": 83.889}, {"w": "follow", "s": 84.269}, {"w": "me", "s": 84.509}]}, {"s": 84.709, "e": 85.409, "words": [{"w": "for", "s": 84.709}, {"w": "more", "s": 84.849}]}]; const TL={
- "scenes":[[34.40,59.30],[63.75,81.00]],
- "type":[
-  {"id":"hook_big","text":"11 student\nfounders.","t0":0.40,"cps":15},
-  {"id":"hook_sub","text":"Who gets to keep building?","t0":4.00,"cps":20},
-  {"id":"name","text":"Vijaylakshmi","t0":8.41,"cps":16},
-  {"id":"eco","text":"Startup ecosystem","t0":12.85,"cps":18},
-  {"id":"same","text":"Same questions. Again & again.","t0":20.40,"cps":22},
-  {"id":"c1sub","text":"How did you discover this problem, and why does it matter to you?","t0":26.35,"cps":32},
-  {"id":"s2title","text":"Competitive\nLandscape","t0":34.70,"cps":16},
-  {"id":"s2quick","text":"Give me a quick market overview","t0":45.00,"cps":24},
-  {"id":"s2q1","text":"Who are the incumbents?","t0":47.10,"cps":26},
-  {"id":"s2q2","text":"What do they offer?","t0":48.05,"cps":26},
-  {"id":"s2q3","text":"Where's your edge?","t0":48.85,"cps":26},
-  {"id":"s3title","text":"User\nJourney","t0":50.60,"cps":14},
-  {"id":"s3plan","text":"What's your plan?","t0":56.30,"cps":18},
-  {"id":"c4sub","text":"The problem you want to solve, and who you're solving it for.","t0":60.00,"cps":32},
-  {"id":"s4title","text":"Vision\n+ ICP","t0":63.90,"cps":14},
-  {"id":"n1","text":"Initial pitch → no 5–10 yr plan needed","t0":64.55,"cps":28},
-  {"id":"n2","text":"Product vision = the problem you solve","t0":66.50,"cps":28},
-  {"id":"n3","text":"ICP = who you're solving it for","t0":69.10,"cps":28},
-  {"id":"n4","text":"Proof of work → things will change","t0":75.90,"cps":28}
+ "scenes": [
+  [
+   34.4,
+   59.3
+  ],
+  [
+   63.75,
+   81.0
+  ]
  ],
- "cursor":[
-  {"t":24.85,"x":1010,"y":1560,"show":1},{"t":25.45,"x":215,"y":1105},{"t":25.55,"x":215,"y":1105,"click":1},{"t":25.95,"x":215,"y":1105,"show":0},
-  {"t":38.90,"x":980,"y":1500,"show":1},{"t":39.36,"x":250,"y":800,"click":1},{"t":40.00,"x":520,"y":800,"click":1},{"t":41.62,"x":790,"y":800,"click":1},
-  {"t":47.95,"x":118,"y":975,"click":1},{"t":48.80,"x":118,"y":1055,"click":1},{"t":49.60,"x":118,"y":1135,"click":1},{"t":50.05,"x":118,"y":1135,"show":0},
-  {"t":53.40,"x":980,"y":1450,"show":1},{"t":53.92,"x":160,"y":915,"click":1},{"t":54.38,"x":375,"y":915,"click":1},{"t":54.84,"x":590,"y":915,"click":1},{"t":55.30,"x":805,"y":915,"click":1},{"t":55.80,"x":805,"y":915,"show":0},
-  {"t":73.10,"x":980,"y":1500,"show":1},{"t":73.58,"x":230,"y":1145,"click":1},{"t":73.95,"x":505,"y":1145,"click":1},{"t":74.32,"x":780,"y":1145,"click":1},{"t":74.80,"x":780,"y":1145,"show":0},
-  {"t":81.75,"x":990,"y":1500,"show":1},{"t":82.18,"x":507,"y":1126,"click":1},{"t":82.70,"x":507,"y":1126,"show":0}
+ "type": [
+  {
+   "id": "hook_big",
+   "text": "11 student\nfounders.",
+   "t0": 0.36,
+   "cps": 34
+  },
+  {
+   "id": "hook_sub",
+   "text": "Who gets to keep building?",
+   "t0": 4.0,
+   "cps": 20
+  },
+  {
+   "id": "name",
+   "text": "Vijaylakshmi",
+   "t0": 8.41,
+   "cps": 16
+  },
+  {
+   "id": "eco",
+   "text": "Startup ecosystem",
+   "t0": 12.85,
+   "cps": 18
+  },
+  {
+   "id": "same",
+   "text": "Same questions. Again & again.",
+   "t0": 20.4,
+   "cps": 22
+  },
+  {
+   "id": "c1sub",
+   "text": "How did you discover this problem, and why does it matter to you?",
+   "t0": 26.35,
+   "cps": 32
+  },
+  {
+   "id": "s2title",
+   "text": "Competitive\nLandscape",
+   "t0": 34.7,
+   "cps": 16
+  },
+  {
+   "id": "s2quick",
+   "text": "Give me a quick market overview",
+   "t0": 45.0,
+   "cps": 24
+  },
+  {
+   "id": "s2q1",
+   "text": "Who are the incumbents?",
+   "t0": 47.1,
+   "cps": 26
+  },
+  {
+   "id": "s2q2",
+   "text": "What do they offer?",
+   "t0": 48.05,
+   "cps": 26
+  },
+  {
+   "id": "s2q3",
+   "text": "Where's your edge?",
+   "t0": 48.85,
+   "cps": 26
+  },
+  {
+   "id": "s3title",
+   "text": "User\nJourney",
+   "t0": 50.6,
+   "cps": 14
+  },
+  {
+   "id": "s3plan",
+   "text": "What's your plan?",
+   "t0": 56.3,
+   "cps": 18
+  },
+  {
+   "id": "c4sub",
+   "text": "The problem you want to solve, and who you're solving it for.",
+   "t0": 60.0,
+   "cps": 32
+  },
+  {
+   "id": "s4title",
+   "text": "Vision\n+ ICP",
+   "t0": 63.9,
+   "cps": 14
+  },
+  {
+   "id": "n1",
+   "text": "Initial pitch \u2192 no 5\u201310 yr plan needed",
+   "t0": 64.55,
+   "cps": 28
+  },
+  {
+   "id": "n2",
+   "text": "Product vision = the problem you solve",
+   "t0": 66.5,
+   "cps": 28
+  },
+  {
+   "id": "n3",
+   "text": "ICP = who you're solving it for",
+   "t0": 69.1,
+   "cps": 28
+  },
+  {
+   "id": "n4",
+   "text": "Proof of work \u2192 things will change",
+   "t0": 75.9,
+   "cps": 28
+  }
  ],
- "pops":[7.45,9.19,9.73,15.10,16.05,23.50,23.66,23.82,23.98,31.24,58.20,73.55,84.20],
- "whoosh":[[6.45,"soft"],[25.80,"card"],[34.40,"scene"],[50.30,"scene"],[59.44,"card"],[63.75,"scene"],[78.60,"soft"],[81.15,"card"]],
- "ding":[25.60,49.65,58.25,79.05,82.25],
- "ticks":[15.10,16.00]
-}
-;
+ "cursor": [
+  {
+   "t": 24.6,
+   "x": 1010,
+   "y": 1560,
+   "show": 1
+  },
+  {
+   "t": 25.18,
+   "x": 204,
+   "y": 1090
+  },
+  {
+   "t": 25.28,
+   "x": 204,
+   "y": 1090,
+   "click": 1
+  },
+  {
+   "t": 25.6,
+   "x": 204,
+   "y": 1090,
+   "show": 0
+  },
+  {
+   "t": 38.9,
+   "x": 1000,
+   "y": 1450,
+   "show": 1
+  },
+  {
+   "t": 39.36,
+   "x": 325,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 40.0,
+   "x": 625,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 41.62,
+   "x": 925,
+   "y": 722,
+   "click": 1
+  },
+  {
+   "t": 47.95,
+   "x": 78,
+   "y": 975,
+   "click": 1
+  },
+  {
+   "t": 48.8,
+   "x": 78,
+   "y": 1055,
+   "click": 1
+  },
+  {
+   "t": 49.6,
+   "x": 78,
+   "y": 1135,
+   "click": 1
+  },
+  {
+   "t": 50.05,
+   "x": 78,
+   "y": 1135,
+   "show": 0
+  },
+  {
+   "t": 53.4,
+   "x": 980,
+   "y": 1450,
+   "show": 1
+  },
+  {
+   "t": 53.92,
+   "x": 160,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 54.38,
+   "x": 375,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 54.84,
+   "x": 590,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 55.3,
+   "x": 805,
+   "y": 915,
+   "click": 1
+  },
+  {
+   "t": 55.8,
+   "x": 805,
+   "y": 915,
+   "show": 0
+  },
+  {
+   "t": 73.1,
+   "x": 980,
+   "y": 1500,
+   "show": 1
+  },
+  {
+   "t": 73.58,
+   "x": 230,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 73.95,
+   "x": 505,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 74.32,
+   "x": 780,
+   "y": 1145,
+   "click": 1
+  },
+  {
+   "t": 74.8,
+   "x": 780,
+   "y": 1145,
+   "show": 0
+  },
+  {
+   "t": 81.75,
+   "x": 990,
+   "y": 1500,
+   "show": 1
+  },
+  {
+   "t": 82.18,
+   "x": 507,
+   "y": 1126,
+   "click": 1
+  },
+  {
+   "t": 82.7,
+   "x": 507,
+   "y": 1126,
+   "show": 0
+  }
+ ],
+ "pops": [
+  7.45,
+  9.19,
+  9.73,
+  15.1,
+  16.05,
+  23.5,
+  23.66,
+  23.82,
+  23.98,
+  31.24,
+  58.2,
+  73.55,
+  84.2
+ ],
+ "whoosh": [
+  [
+   6.45,
+   "soft"
+  ],
+  [
+   25.8,
+   "card"
+  ],
+  [
+   34.4,
+   "scene"
+  ],
+  [
+   50.3,
+   "scene"
+  ],
+  [
+   59.44,
+   "card"
+  ],
+  [
+   63.75,
+   "scene"
+  ],
+  [
+   78.6,
+   "soft"
+  ],
+  [
+   81.15,
+   "card"
+  ]
+ ],
+ "ding": [
+  25.3,
+  49.65,
+  58.25,
+  79.05,
+  82.25
+ ],
+ "ticks": [
+  15.1,
+  16.0
+ ]
+};
 const $=id=>document.getElementById(id);
 const cl=(x,a=0,b=1)=>Math.min(b,Math.max(a,x));
 const eo=x=>1-Math.pow(1-cl(x),3);
@@ -260,10 +568,10 @@ function render(t){
  if(t>=15.05&&t<16.0){const r=Math.min(10,(t-15.1)/.9*10);$('tm1').textContent='⏱ '+String(Math.max(0,Math.floor(r))).padStart(2,'0')+':00 pitch'}else if(t>=16.0)$('tm1').textContent='⏱ 10:00 pitch';
  show('same',t,20.35,23.3,{dy:20,inD:.15});$('same-t').innerHTML=typed('same',t);
  // LOCK TILES
- show('tilesHead',t,23.45,25.65,{dy:20});
- ['t1','t2','t3','t4'].forEach((id,i)=>{show(id,t,23.50+i*0.16,25.65,{dy:30,scale:true})});
- const op=t>=25.55;$('t1').classList.toggle('open',op);$('t1').firstElementChild.textContent=op?'🔓':'🔒';
- if(op&&t<25.9){$('t1').style.transform=`scale(${1+0.12*Math.sin(cl((t-25.55)/.3)*Math.PI)})`}
+ show('tilesHead',t,23.45,25.42,{dy:20,outD:.18});
+ ['t1','t2','t3','t4'].forEach((id,i)=>{show(id,t,23.50+i*0.16,25.42,{dy:30,scale:true,outD:.18})});
+ const op=t>=25.28;$('t1').classList.toggle('open',op);$('t1').firstElementChild.textContent=op?'🔓':'🔒';
+ if(op&&t<25.42){$('t1').style.transform=`scale(${1+0.12*Math.sin(cl((t-25.28)/.3)*Math.PI)})`}
  // PROGRESS LOCKS + CARDS
  const inL=t>=25.75&&t<81.0; $('prog').style.opacity=inL?cl(Math.min((t-25.75)/.25,(81.0-t)/.2)):0;
  let cur=null;CARDS.forEach((c,i)=>{const el=$('prog').children[i];const st=t>=c.t1?'done':(t>=c.t0?'cur':'');
@@ -283,11 +591,11 @@ function render(t){
  [['k1','q1','s2q1','b1',47.95],['k2','q2','s2q2','b2',48.80],['k3','q3','s2q3','b3',49.60]].forEach(([k,q,id,b,ct])=>{
    show(k,t,TY[id].t0-0.05,50.2,{dy:14,inD:.15});$(q).innerHTML=(t<50.3)?typed(id,t,{caret:false}):'';const on=t>=ct;$(b).classList.toggle('on',on);$(b).textContent=on?'✓':''});
  // S3
- show('s3b',t,50.45,59.2,{dy:16});$('s3t').innerHTML=(t>=50.3&&t<59.3)?typed('s3title',t):'';
- show('jline',t,53.2,59.2,{dy:0,inD:.2});$('jfill').style.width=(100*eo((t-53.92)/1.4))+'%';
- [['n1',53.92],['n2',54.38],['n3',54.84],['n4',55.30]].forEach(([id,ct],i)=>{show(id,t,53.25+i*0.08,59.2,{dy:20,scale:true});$(id).classList.toggle('on',t>=ct)});
- $('plan').innerHTML=(t>=56.3&&t<59.3)?typed('s3plan',t):'';
- show('through',t,58.20,59.2,{dy:16,scale:true});
+ show('s3b',t,50.45,58.95,{dy:16});$('s3t').innerHTML=(t>=50.3&&t<59.2)?typed('s3title',t):'';
+ show('jline',t,53.2,58.95,{dy:0,inD:.2});$('jfill').style.width=(100*eo((t-53.92)/1.4))+'%';
+ [['n1',53.92],['n2',54.38],['n3',54.84],['n4',55.30]].forEach(([id,ct],i)=>{show(id,t,53.25+i*0.08,58.95,{dy:20,scale:true});$(id).classList.toggle('on',t>=ct)});
+ $('plan').innerHTML=(t>=56.3&&t<59.2)?typed('s3plan',t):'';
+ show('through',t,58.20,58.95,{dy:16,scale:true});
  // S4 notes
  const s4on=t>=63.75&&t<78.6;
  show('s4b',t,63.85,78.5,{dy:16});$('s4t').innerHTML=s4on?typed('s4title',t):'';
@@ -309,8 +617,8 @@ function render(t){
  if(c.show){cu.style.opacity=1;const press=c.click!==null&&c.click<0.12?0.85:1;cu.style.transform=`translate(${c.x-8}px,${c.y-4}px) scale(${press})`}else cu.style.opacity=0;
  if(c.show&&c.click!==null){const u=c.click/0.35;rp.style.opacity=1-u;rp.style.transform=`translate(${c.x}px,${c.y}px) scale(${0.4+0.9*u})`}else rp.style.opacity=0;
  // CAPTIONS
- const hide=t<6.4||t>81.1||(t>8.3&&t<12.75)||(t>23.4&&t<25.75)||(t>=78.6&&t<81.1);
- let y=full?932:1262; if(t>=6.4&&t<14.3)y=1352; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
+ const hide=t<6.4||t>81.1||(t>8.3&&t<12.75)||(t>23.4&&t<25.75)||(t>=80.75&&t<81.1);
+ let y=full?985:1262; if(t>=6.4&&t<14.3)y=1352; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
  const cap=$('cap');cap.style.top=y+'px';const ch=hide?null:CAPS.find(c=>t>=c.s&&t<c.e);
  if(!ch)cap.innerHTML='';else{cap.innerHTML=ch.words.map((w,i)=>{const nx=ch.words[i+1];const on=t>=w.s&&(!nx||t<nx.s);return`<span class="w${on?' on':''}">${w.w}</span>`}).join(' ');
   const a=cl((t-ch.s)/.08);cap.style.opacity=a;cap.style.transform=`translateY(${(1-a)*8}px)`}

@@ -10,3 +10,17 @@
 
 Specs measured on final file: 1080×1920, 30 fps, H.264/AAC, −14.1 LUFS integrated, −1.5 dBFS peak.
 Privacy: all student faces and TV slides blurred in every checked frame.
+
+---
+# Review gate: v2 (final_v2.mp4, 84.74 s)
+**PASS** (independent reviewer, no blockers). Recommended fixes applied and re-rendered:
+- Faster hook typing, and the opening frame now has the creator looking up.
+- Lock tiles fade out before the Founder Story card enters.
+- User Journey elements clear before the footage returns.
+- Cursor clicks moved off text.
+- Recap captions restored and the recap grid lowered.
+- Card and caption nudged lower, clear of the chin.
+- Soft format clip swapped for a sharper one.
+
+Specs on final file: −14.2 LUFS, −1.5 dBFS peak, 1080×1920, 30 fps.
+Student footage: ~1 s, blurred.
