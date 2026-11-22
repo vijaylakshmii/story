@@ -2,7 +2,7 @@
 
 On Thursday, 11 student founders pitched to me, and I had to decide who keeps building. 🎤
 
-By pitch #5, I was asking the same questions again and again. So if you're pitching soon, make sure you've figured out these 4 things:
+By the end of the day, I was asking the same questions again and again. So if you're pitching soon, make sure you've figured out these 4 things:
 
 01 · Founder story: why this problem, and why YOU?
 02 · Competitive landscape: who else is solving it, and where's your edge?
