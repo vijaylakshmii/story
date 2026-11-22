@@ -1,11 +1,7 @@
 {
  "scenes": [
   [
-   34.4,
-   59.3
-  ],
-  [
-   63.75,
+   25.7,
    81.0
   ]
  ],
@@ -97,7 +93,7 @@
   {
    "id": "s4title",
    "text": "Vision\n+ ICP",
-   "t0": 63.9,
+   "t0": 59.6,
    "cps": 14
   },
   {
@@ -123,6 +119,24 @@
    "text": "Proof of work \u2192 things will change",
    "t0": 75.9,
    "cps": 28
+  },
+  {
+   "id": "s1title",
+   "text": "Founder\nStory",
+   "t0": 25.95,
+   "cps": 14
+  },
+  {
+   "id": "s1q1",
+   "text": "Why this problem?",
+   "t0": 30.3,
+   "cps": 24
+  },
+  {
+   "id": "s1q2",
+   "text": "Why you?",
+   "t0": 31.05,
+   "cps": 20
   }
  ],
  "cursor": [

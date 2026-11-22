@@ -48,14 +48,14 @@ for it in T["type"]:
         tc=it["t0"]+i/it["cps"]
         if tc-last<0.055: continue
         last=tc; v=rng.uniform(-1,1)
-        place(key(v),tc,-27+rng.uniform(-2,1.5)-(4 if ch==" " else 0),f"key:{it['id']}")
+        place(key(v),tc,-22+rng.uniform(-2,1.5)-(4 if ch==" " else 0),f"key:{it['id']}")
 for c in T["cursor"]:
-    if c.get("click"): place(mouse(),c["t"],-20,"mouse")
-for t in T["pops"]: place(pop(),t+0.08,-24,"pop",0.004)
-for t,kind in T["whoosh"]: place(whoosh(),t+0.16,{"card":-22,"scene":-20,"soft":-26}[kind],"whoosh:"+kind,0.2)
-for t in T["ding"]: place(ding(),t,-25,"ding")
+    if c.get("click"): place(mouse(),c["t"],-11,"mouse")
+for t in T["pops"]: place(pop(),t+0.08,-19,"pop",0.004)
+for t,kind in T["whoosh"]: place(whoosh(),t+0.16,{"card":-18,"scene":-16,"soft":-22}[kind],"whoosh:"+kind,0.2)
+for t in T["ding"]: place(ding(),t,-19,"ding")
 a,b=T["ticks"]
-for k in range(10): place(tick(),a+k*(b-a)/9,-28,"tick")
+for k in range(10): place(tick(),a+k*(b-a)/9,-22,"tick")
 bus=np.clip(bus,-1,1).astype(np.float32)
 subprocess.run(["ffmpeg","-v","error","-y","-f","f32le","-ar",str(SR),"-ac","1","-i","-","-c:a","pcm_s24le","sound/sfx_bus2.wav"],input=bus.tobytes(),check=True)
 json.dump(log,open("sound/sfx2.json","w")); 
