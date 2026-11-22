@@ -13,7 +13,7 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;font
 .o0{opacity:0}
 #topfade{left:0;right:0;top:0;height:520px;background:linear-gradient(180deg,rgba(15,22,18,.42),transparent)}
 #botfade{left:0;right:0;bottom:0;height:900px;background:linear-gradient(180deg,transparent,rgba(15,22,18,.55) 70%,rgba(15,22,18,.68))}
-#introshade{left:0;right:0;top:760px;height:700px;background:linear-gradient(180deg,transparent,rgba(12,18,15,.55) 30%,rgba(12,18,15,.55) 75%,transparent)}
+#introshade{left:0;right:0;top:900px;height:640px;background:linear-gradient(180deg,transparent,rgba(12,18,15,.55) 30%,rgba(12,18,15,.55) 75%,transparent)}
 #scene{inset:0;background:var(--bg);background-image:radial-gradient(rgba(31,46,38,.10) 2px,transparent 2.5px);background-size:44px 44px}
 .pill{display:inline-flex;align-items:center;gap:12px;background:var(--card);color:var(--ink);font-weight:700;border-radius:999px;padding:12px 24px;font-size:30px;box-shadow:0 8px 22px rgba(0,0,0,.18);white-space:nowrap}
 .pill.dark{background:var(--deep);color:#fff}
@@ -27,14 +27,14 @@ html,body{width:1080px;height:1920px;overflow:hidden;background:transparent;font
 #h-sub{color:#F3F7F3;font-weight:600;font-style:italic;font-size:54px;margin-top:26px;text-shadow:0 2px 14px rgba(0,0,0,.5)}
 /* intro */
 #tag{left:64px;top:300px}
-#name{left:64px;top:880px;color:#fff;font-weight:800;font-size:104px;letter-spacing:-.03em;text-shadow:0 4px 24px rgba(0,0,0,.45)}
-#nameul{left:68px;top:1005px;height:10px;border-radius:5px;background:var(--card);width:0}
-#logos{left:64px;top:1040px;display:flex;gap:20px}
+#name{left:64px;top:1110px;color:#fff;font-weight:800;font-size:104px;letter-spacing:-.03em;text-shadow:0 4px 24px rgba(0,0,0,.45)}
+#nameul{left:68px;top:1236px;height:10px;border-radius:5px;background:var(--card);width:0}
+#logos{left:64px;top:1268px;display:flex;gap:20px}
 .logo{background:#fff;border-radius:26px;height:150px;padding:0 30px;display:flex;align-items:center;gap:16px;box-shadow:0 12px 30px rgba(0,0,0,.28)}
 .logo img{display:block}
 .logo span{font-weight:800;font-size:40px;color:#7A1F2B;letter-spacing:-.01em}
 #alum{left:64px;top:1214px}
-#eco{left:64px;top:1214px}
+#eco{left:64px;top:1262px}
 /* format */
 #timer{left:64px;top:980px;display:flex;gap:18px}
 #timer .pill{font-size:40px;padding:18px 32px;font-variant-numeric:tabular-nums}
@@ -217,7 +217,7 @@ function render(t){
  show('tag',t,7.40,14.25,{dy:-20,scale:true});
  $('name').innerHTML=(t>=8.41&&t<14.2)?typed('name',t):'';$('name').style.opacity=t<14.0?1:cl(1-(t-14.0)/.2);
  $('nameul').style.width=(t>=9.0&&t<14.2?360*eo((t-9.0)/.4):0)+'px';
- show('lg1',t,9.15,14.0,{dy:30,scale:true});show('lg2',t,9.70,14.0,{dy:30,scale:true});
+ show('lg1',t,9.15,12.55,{dy:30,scale:true});show('lg2',t,9.70,12.55,{dy:30,scale:true});
  const ev=show('eco',t,12.80,14.0,{dy:16,inD:.15});$('eco-t').innerHTML='🚀 '+typed('eco',t);
  // FORMAT
  show('tm1',t,15.05,17.95,{dy:24,scale:true});show('tm2',t,16.0,17.95,{dy:24,scale:true});
@@ -273,8 +273,8 @@ function render(t){
  if(c.show){cu.style.opacity=1;const press=c.click!==null&&c.click<0.12?0.85:1;cu.style.transform=`translate(${c.x-8}px,${c.y-4}px) scale(${press})`}else cu.style.opacity=0;
  if(c.show&&c.click!==null){const u=c.click/0.35;rp.style.opacity=1-u;rp.style.transform=`translate(${c.x}px,${c.y}px) scale(${0.4+0.9*u})`}else rp.style.opacity=0;
  // CAPTIONS
- const hide=t<6.4||t>81.1||(t>23.4&&t<25.75)||(t>=78.6&&t<81.1);
- let y=full?932:1262; if(t>=6.4&&t<14.3)y=1330; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
+ const hide=t<6.4||t>81.1||(t>8.3&&t<12.75)||(t>23.4&&t<25.75)||(t>=78.6&&t<81.1);
+ let y=full?932:1262; if(t>=6.4&&t<14.3)y=1352; if(light)y=1300; if(t>=63.75&&t<78.6)y=1330;
  const cap=$('cap');cap.style.top=y+'px';const ch=hide?null:CAPS.find(c=>t>=c.s&&t<c.e);
  if(!ch)cap.innerHTML='';else{cap.innerHTML=ch.words.map((w,i)=>{const nx=ch.words[i+1];const on=t>=w.s&&(!nx||t<nx.s);return`<span class="w${on?' on':''}">${w.w}</span>`}).join(' ');
   const a=cl((t-ch.s)/.08);cap.style.opacity=a;cap.style.transform=`translateY(${(1-a)*8}px)`}
