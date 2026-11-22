@@ -2,9 +2,9 @@
  {
   "event": "hook title",
   "type": "whoosh",
-  "motion_peak": 1.56,
+  "motion_peak": 0.56,
   "sfx_peak": 0.2,
-  "start": 1.36,
+  "start": 0.36,
   "gain_db": -21.0
  },
  {
