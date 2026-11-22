@@ -16,6 +16,8 @@ What should I break down next? Tell me in the comments 👇
 
 #startups #founders #pitching #studentfounders #entrepreneurship #startupadvice #pitchdeck #ISB #LSR #WayWithVJ
 
+(ISB, ISB prep, ISB interview, MBA, MBA prep, B-school, career, career advice, startup pitch, pitch deck, pitching tips, investor pitch, founder, student founder, startup, entrepreneurship, startup ecosystem, founder-market fit, competitive analysis, user journey, ICP, product vision, LSR, Delhi University)
+
 ---
 Short alternative:
 11 founders. 10-minute pitches. 5 minutes of my questions. Here's what I look for before I say "keep building." 🔖 Save it for your next pitch.
